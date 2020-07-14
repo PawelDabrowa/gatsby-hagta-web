@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -27,6 +29,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-datocms`,
+        options: {
+          apiToken: `4a741297ffdeb332e21006322dfa26`,
+          // Preview the latest version of records instead of the published one
+          previewMode: false,
+          // Disable automatic reloading of content when some change occurs on DatoCMS:
+          disableLiveReload: false,
+          apiUrl: 'https://site-api.datocms.com'
+        }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
