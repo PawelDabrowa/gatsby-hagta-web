@@ -1,22 +1,24 @@
 import React from "react"
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { Title } from "../styles/aboutStyles"
+import { ContentWrapper, StyledImage, Title, Content, Subtitle, Author, Line } from "../styles/aboutStyles"
+import Layout from '../layout'
 
 
 const AboutPage = ({ data }) => (
 
-  <>
+  <Layout>
   
-  
+    <ContentWrapper>
     <Title>{data.datoCmsAbout.title}</Title>
-    <h2>{data.datoCmsAbout.subtitle}</h2>
-
-    <p>{data.datoCmsAbout.contentArea}</p>
-
-    <p><em>{data.datoCmsAbout.author}</em></p>
-    <Image fluid={data.datoCmsAbout.imageData.fluid} />
-  </>
+    <Subtitle>{data.datoCmsAbout.subtitle}</Subtitle>
+    <Line />
+    <Content>{data.datoCmsAbout.contentArea}</Content>
+    <Line />
+    <Author><em>{data.datoCmsAbout.author}</em></Author>
+    </ContentWrapper>
+    <StyledImage fluid={data.datoCmsAbout.imageData.fluid} />
+  </Layout>
   
   
 );
