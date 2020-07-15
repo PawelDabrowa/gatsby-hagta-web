@@ -5,7 +5,7 @@ import { ButtonWrapper } from './styles/PrimaryButtonStyles'
 const PrimaryButton = () => (
 
   <ButtonWrapper>
-    <Link aria-label="read more" to="/articles">read more</Link>
+    <Link to="/articles">read more</Link>
   </ButtonWrapper>
 );
 

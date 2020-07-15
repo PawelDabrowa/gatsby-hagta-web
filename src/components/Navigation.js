@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return (
     <>
-    <StyledHamburger hamburger={menu} onClick={()=>showMenu(!menu)}>
+    <StyledHamburger aria-label="hamburger" hamburger={menu} onClick={()=>showMenu(!menu)}>
         <HamburgerBox>
           <HamburgerInner hamburger={menu} />
         </HamburgerBox>
